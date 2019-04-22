@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68B6122E-41BB-4F0F-90CB-B921F78DBF13}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VoiceController</RootNamespace>
+    <AssemblyName>VoiceController</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slions.Microsoft.Speech.11.1.0.0\lib\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.5\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\AbortShutdown.cs" />
+    <Compile Include="Commands\Cancel.cs" />
+    <Compile Include="Commands\CallMortens.cs" />
+    <Compile Include="Commands\BlowUp.cs" />
+    <Compile Include="Commands\Down.cs" />
+    <Compile Include="Commands\INeedAutoResetEvent.cs" />
+    <Compile Include="Commands\IStopListening.cs" />
+    <Compile Include="Commands\Up.cs" />
+    <Compile Include="Commands\Left.cs" />
+    <Compile Include="Commands\Right.cs" />
+    <Compile Include="Commands\ReadInEnglish.cs" />
+    <Compile Include="Commands\ReadInHungarian.cs" />
+    <Compile Include="Commands\StopReading.cs" />
+    <Compile Include="Commands\ScrollUp.cs" />
+    <Compile Include="Commands\ScrollDown.cs" />
+    <Compile Include="Commands\Help.cs" />
+    <Compile Include="Commands\SaveDesktopImage.cs" />
+    <Compile Include="Commands\SendMail.cs" />
+    <Compile Include="Commands\Translate.cs" />
+    <Compile Include="Commands\Press.cs" />
+    <Compile Include="Commands\NormalSpeed.cs" />
+    <Compile Include="Commands\Slower.cs" />
+    <Compile Include="Commands\Faster.cs" />
+    <Compile Include="Commands\Stop.cs" />
+    <Compile Include="Commands\ToggleFullscreen.cs" />
+    <Compile Include="Commands\DoNotPreventHibernate.cs" />
+    <Compile Include="Commands\PreventHibernate.cs" />
+    <Compile Include="Commands\HibernateComputer.cs" />
+    <Compile Include="Commands\ThankYou.cs" />
+    <Compile Include="Commands\WhatIsTheDate.cs" />
+    <Compile Include="Commands\WhatIsTheTime.cs" />
+    <Compile Include="Commands\Play.cs" />
+    <Compile Include="Commands\WhatIsOnClipboard.cs" />
+    <Compile Include="Commands\Paste.cs" />
+    <Compile Include="Commands\Copy.cs" />
+    <Compile Include="Commands\Next.cs" />
+    <Compile Include="Commands\Previous.cs" />
+    <Compile Include="Commands\Pause.cs" />
+    <Compile Include="Commands\StartListening.cs" />
+    <Compile Include="Commands\VideoCallMortens.cs" />
+    <Compile Include="Commands\StopListeningCmd.cs" />
+    <Compile Include="Commands\WriteToMortens.cs" />
+    <Compile Include="Commands\TaskManager.cs" />
+    <Compile Include="Commands\ShowDesktop.cs" />
+    <Compile Include="Commands\Unmute.cs" />
+    <Compile Include="Commands\Silence.cs" />
+    <Compile Include="Commands\VolumeUp.cs" />
+    <Compile Include="Commands\VolumeDown.cs" />
+    <Compile Include="Commands\StartMusic.cs" />
+    <Compile Include="Commands\No.cs" />
+    <Compile Include="Commands\OK.cs" />
+    <Compile Include="Commands\OldNotepad.cs" />
+    <Compile Include="Commands\Sleep.cs" />
+    <Compile Include="DictateCommands\Comma.cs" />
+    <Compile Include="DictateCommands\Backspace.cs" />
+    <Compile Include="DictateCommands\ExclamationMark.cs" />
+    <Compile Include="DictateCommands\QuestionMark.cs" />
+    <Compile Include="DictateCommands\Period.cs" />
+    <Compile Include="DictateCommands\DeleteLastWord.cs" />
+    <Compile Include="DictateCommands\StopDictate.cs" />
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="Messages\Base64.cs" />
+    <Compile Include="Commands\CloseApplication.cs" />
+    <Compile Include="Commands\CommandPrompt.cs" />
+    <Compile Include="Commands\YouTube.cs" />
+    <Compile Include="Commands\Facebook.cs" />
+    <Compile Include="Commands\ShutdownComputer.cs" />
+    <Compile Include="Commands\RestartComputer.cs" />
+    <Compile Include="Commands\Calculator.cs" />
+    <Compile Include="Commands\Google.cs" />
+    <Compile Include="Commands\Left4Dead2.cs" />
+    <Compile Include="Commands\Search.cs" />
+    <Compile Include="Commands\Notepad.cs" />
+    <Compile Include="Commands\Paint.cs" />
+    <Compile Include="Commands\Exit.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Messages\Constants.cs" />
+    <Compile Include="Messages\Delegates.cs" />
+    <Compile Include="Messages\Enums.cs" />
+    <Compile Include="Messages\NotDetailedException.cs" />
+    <Compile Include="Messages\RichTextBoxTS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Messages\SendErrorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\SendErrorReport.Designer.cs" />
+    <Compile Include="Messages\SendMail.cs" />
+    <Compile Include="Messages\SentChangedEventArgs.cs" />
+    <Compile Include="Messages\WinAPI.cs" />
+    <Compile Include="MMDeviceEnumerator.cs" />
+    <Compile Include="ProcessUtils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="UnhandledExceptionHandler.cs" />
+    <Compile Include="UrlMp3Player.cs" />
+    <Compile Include="UrlMp3Reader.cs" />
+    <Compile Include="Reader.cs" />
+    <Compile Include="WindowHandler.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="FileWriter.cs" />
+    <Compile Include="Messages\SmtpServer.cs" />
+    <Compile Include="Messages\MailHeader.cs" />
+    <Compile Include="SmtpClientExtension.cs" />
+    <Compile Include="Commands\VlcVolumeUp.cs" />
+    <Compile Include="Commands\VlcVolumeDown.cs" />
+    <Compile Include="Commands\Vlc.cs" />
+    <Compile Include="Commands\StopVlc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Commands\Sleep\PlayLastMedia.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Commands\Sleep\Sleep.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages\SendErrorReport.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\MessageBoxes\MessageBoxes.csproj">
+      <Project>{E5A17636-88F6-4209-BC72-8F5A36AD9701}</Project>
+      <Name>MessageBoxes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enums\Enums.csproj">
+      <Project>{A978CC93-5493-44E4-9653-99478E633B8B}</Project>
+      <Name>Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Consts\Consts.csproj">
+      <Project>{0938036C-D437-498F-B15C-4528F260FFCF}</Project>
+      <Name>Consts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SourceInfo\SourceInfo.csproj">
+      <Project>{013BADF1-7450-4F0D-BA16-35A8DFB52697}</Project>
+      <Name>SourceInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
